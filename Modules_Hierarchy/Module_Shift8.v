@@ -4,8 +4,9 @@ module top_module (
     input [1:0] sel, 
     output [7:0] q 
 );
-    wire [7:0] a,b,c;
-    
+    wire [7:0] a,b,c;        // output of each my_dff8
+
+    // Instantiate three my_dff8s
     my_dff8 d1 ( clk, d, a );
     my_dff8 d2 ( clk, a, b );
     my_dff8 d3 ( clk, b, c );
